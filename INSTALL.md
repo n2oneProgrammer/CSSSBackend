@@ -23,7 +23,7 @@ django-admin shell
 ```
 
 ## Set up database
-Set up date to contect to the database (We will use mysql database.) in ./mysite/mysite/settings.py
+Set up date to contect to the database (We will use mysql database.) in ./server/mysite/settings.py
 ```
 DATABASES = {
     'default': {
