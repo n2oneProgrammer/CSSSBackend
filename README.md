@@ -1,4 +1,4 @@
 # CSSS Backend
 Backend do strony klasowej.
 
-Instrukcja instalacjii [this link](./INSTALL.md)
+Instrukcja instalacjii jset odstepna pod [tym linkem](./INSTALL.md)
