@@ -6,12 +6,14 @@
 
 We **highly recommend** and only officially support the latest patch release of each Python and Django series.
 
-## Activate a virtual environment.
+## Activate environment
+Activate a virtual environment.
 ```
 env\Scripts\activate
 ```
 
-## Generate a new private key, and put it in ./mysite/key.txt
+## Generate key
+Generate a new private key, and put it in ./mysite/key.txt
 ```
 django-admin shell
 >>> from django.core.management.utils import get_random_secret_key
@@ -20,7 +22,8 @@ django-admin shell
 >>>
 ```
 
-## Set up date to contect to the database (We will use mysql database.) in ./mysite/mysite/settings.py
+## Set up database
+Set up date to contect to the database (We will use mysql database.) in ./mysite/mysite/settings.py
 ```
 DATABASES = {
     'default': {
@@ -34,15 +37,17 @@ DATABASES = {
 }
 ```
 
-## Create an initial migration for models, and sync the database for the first time.
+## Migration and sync the database
+Create an initial migration for models, and sync the database for the first time.
 ```
 python manage.py makemigrations mysite
 python manage.py migrate
 ```
 
 
-## Start up a sample server.
+## Start up a server.
 Before starting up python server start up DB server (for exampele XAMPP).
+And after that start python server:
 ```
 python manage.py runserver
 ```
