@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"C:\Users\n2one\Desktop\CSSS\env"
+$VIRTUAL_ENV = r"C:\Users\Admin\PycharmProjects\CSSSBackend\env2"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]
