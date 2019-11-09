@@ -13,7 +13,7 @@ env\Scripts\activate
 ```
 
 ## Generate key
-Generate a new private key, and put it in ./mysite/key.txt
+Generate a new private key, and put it in ./server/mysite/key.txt
 ```
 django-admin shell
 >>> from django.core.management.utils import get_random_secret_key
