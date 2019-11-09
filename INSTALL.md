@@ -20,7 +20,7 @@ django-admin shell
 >>>
 ```
 
-##Set up date to contect to the database (We will use mysql database.) in ./mysite/mysite/settings.py
+## Set up date to contect to the database (We will use mysql database.) in ./mysite/mysite/settings.py
 ```
 DATABASES = {
     'default': {
@@ -42,7 +42,7 @@ python manage.py migrate
 
 
 ## Start up a sample server.
-### Before starting up python server start up DB server (for exampele XAMPP).
+Before starting up python server start up DB server (for exampele XAMPP).
 ```
 python manage.py runserver
 ```
