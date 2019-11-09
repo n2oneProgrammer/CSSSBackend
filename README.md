@@ -1,4 +1,4 @@
 # CSSS Backend
 Backend do strony klasowej.
 
-Co mam tu napisać???
+Instrukcja instalacjii [this link](./INSTALL.md)
