@@ -1,4 +1,5 @@
 # CSSS Backend
-Backend do strony klasowej.
+#### This is backend for our class website.
 
-Instrukcja instalacjii jest odstepna pod [tym linkem](./INSTALL.md)
+## Install Guide
+Installation guide are available at [this link](./INSTALL.md)
