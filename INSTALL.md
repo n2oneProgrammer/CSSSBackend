@@ -12,6 +12,13 @@ Activate a virtual environment.
 env\Scripts\activate
 ```
 
+##Install packets
+'''
+pip install django
+pip install djangorestframework
+pip install mysqlclient
+'''
+
 ## Generate key
 Generate a new private key, and put it in ./server/mysite/key.txt
 ```
