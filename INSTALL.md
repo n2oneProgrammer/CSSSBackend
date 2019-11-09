@@ -32,7 +32,7 @@ DATABASES = {
         'USER': 'root', #DB user name
         'PASSWORD': '',  #DB password
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306', # DB port as default is 3306
+        'PORT': '3306', # DB port (default is 3306)
     }
 }
 ```
