@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY_FILE = open("./server/mysite/key.txt", "r")
+SECRET_KEY_FILE = open("./mysite/key.txt", "r")
 SECRET_KEY = SECRET_KEY_FILE.read()
 
 

@@ -1,7 +1,8 @@
 from django.db import models
 
+#this function ceretwe path to file
 def cerate_path(Type):
-    return '.\files\\'+str(Type.name)
+    return '\\'+str(Type.name)
 
 
 class file (models.Model):
@@ -9,10 +10,12 @@ class file (models.Model):
     description = models.TextField()
     fileType = models.ForeignKey('types', on_delete=models.CASCADE)
     upload = models.FileField(upload_to=cerate_path(fileType))
+    #autor = models.ForeignKey('auth.user', on_delete=models.CASCADE)
     
-    
-    def getUrl():
-        return self.fileType.url
+    #this function return url to file
+    def getUrl(self):
+        return self.fileType.url()
+
 
 
 class types (models.Model):
