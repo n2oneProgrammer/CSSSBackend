@@ -1,13 +1,14 @@
 from django.urls import include, path
 from rest_framework import routers
-from server.auth import views
-from server.fileSystem import views as viewsF
+from server.users import views as viewsUsers
+from server.fileSystem import views as viewsFile
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
-router.register(r'files', viewsF.fileViewSet)
-router.register(r'types', viewsF.typesViewSet)
+router.register(r'users', viewsUsers.UserViewSet)
+router.register(r'permissions', viewsUsers.PermissionsViewSet)
+router.register(r'permissionsFunction', viewsUsers.PermissionsFunctionViewSet)
+router.register(r'files', viewsFile.fileViewSet)
+router.register(r'types', viewsFile.typesViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
