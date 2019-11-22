@@ -1,26 +1,21 @@
-from server.users.models import User, Permissions, PermissionsFunction
 from rest_framework import viewsets
-from server.users.serializers import UserSerializer, PermissionsSerializer, PermissionsFunctionSerializer
+from django.shortcuts import render, redirect
+from django.contrib.auth import (authenticate, get_user_model, login, logout)  
+from .forms import UserLoginForm , UserRegisterForm
 
-
-class UserViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows users to be viewed or edited.
-    """
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
-
-class PermissionsViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows groups to be viewed or edited.
-    """
-    queryset = Permissions.objects.all()
-    serializer_class = PermissionsSerializer
+def login_view(request):
+    next=requset.GET.get('next')
+    form = UserLoginForm(request.POST or None)
+    if form.is_valid():
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password')
+        user = authenticate(username=username,password=password)
+        login(reqest, user)
+        if next:
+            return redirect(next)
+        return redirect('/')
+    context = {
+        'form': form,
+        }
+    return render(request, "login.html", context)
     
-class PermissionsFunctionViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows groups to be viewed or edited.
-    """
-    queryset = PermissionsFunction.objects.all()
-    serializer_class = PermissionsFunctionSerializer
